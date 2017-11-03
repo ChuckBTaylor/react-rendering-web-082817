@@ -13,6 +13,8 @@
   <img src="http://www.awesomelyluvvie.com/wp-content/uploads/2014/04/lion-king-circle-of-life.gif" />
 </p>
 
+Ch-ch-ch-changes
+
 The Circle of Life. Who knew learning about the React framework could bring us to Lion King? As with every creature in the animal kingdom, React components get created and destroyed only once. The majority of their lifetime is spent on updating - that is, reacting to user interactions.
 
 We are kindly provided with 4 lifecycle methods to help us handle updates:`componentWillReceiveProps`, `shouldComponentUpdate`, `componentWillUpdate` and `componentDidUpdate`.
@@ -53,7 +55,7 @@ shouldComponentUpdate(nextProps, nextState) {
 ```
 
 For example, the above code means that the React component gets re-rendered when `myImportantValue` has changed. A word of caution though: you might think it'd be a good idea to use the `shouldComponentUpdate` function to only re-render the component if *any* of the props have changed and avoid *all* redundant re-renders, e.g. if `this.props !== nextProps`. However, because `props` and `nextProps` are both JavaScript objects, this comparison will always return `true`, that is `{} === {}` is never `true` in JavaScript (object equality is one of the many, many JavaScript quirks out there...
-  
+
 The reasons behind it are a bit too advanced to explain at this stage, it's enough just to know about it. Further reading [here](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html).
 
 Coming back to our theater metaphor, imagine a play is being carried out over and over. The actors have a script they read from and generally don't deviate from it. However, suppose the director decides that a new version of the script is in order - maybe he felt the audience didn't like a scene, or maybe he just fancied an experiment, either way, the actors have a new script and have to carry out the play in a slightly different way. As a lifecycle method, this could be denoted like this:
